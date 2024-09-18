@@ -1,7 +1,14 @@
 ---
 - hosts: all
   become: True
-  motd: Ansible Managed node by erwin
   tasks:
 
-  - name:
+  - name: echo cat message
+    copy:
+       content: Ansible managed node by erwin
+       dest: /home/erwin/motd
+
+  - name: create user
+    user:
+      name: erwin
+      state: present
