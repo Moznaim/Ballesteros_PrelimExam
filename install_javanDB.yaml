@@ -5,7 +5,7 @@
 
   - name: install java open-jdk
     apt:
-      name: default-jre
+      name: default-jdk
 
   - name: install maria db
     apt:
